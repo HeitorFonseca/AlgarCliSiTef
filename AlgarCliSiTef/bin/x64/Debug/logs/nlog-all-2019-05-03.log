@@ -1,0 +1,255 @@
+2019-05-03 14:29:43.2670||DEBUG|AlgarCliSiTef.Program|init main 
+2019-05-03 14:29:52.0214||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\heitor.araujo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-05-03 14:30:10.9429|6|FATAL|Microsoft.AspNetCore.Hosting.Internal.WebHost|Application startup exception Core.Exceptions.BusinessException: Exception of type 'Core.Exceptions.BusinessException' was thrown.
+   at Core.Utils.TefMessages.PinpadErrors(Int32 value) in C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\Core\Utils\TefMessages.cs:line 90
+   at AlgarCliSiTef.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env) in C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\AlgarCliSiTef\Startup.cs:line 81
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.ApplicationInsights.HostingStartup.ApplicationInsightsLoggerStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.ApplicationInsights.AspNetCore.ApplicationInsightsStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISSetupFilter.<>c__DisplayClass3_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+2019-05-03 14:30:13.0304|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:53880/api/values   
+2019-05-03 14:30:13.5451|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 618.4534ms 500 text/html; charset=utf-8 
+2019-05-03 14:30:13.9591|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:53880/favicon.ico   
+2019-05-03 14:30:14.1815|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 222.4296ms 500 text/html; charset=utf-8 
+2019-05-03 14:33:56.0596||DEBUG|AlgarCliSiTef.Program|init main 
+2019-05-03 14:33:56.4208||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\heitor.araujo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-05-03 14:34:04.7886|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:53880/api/algarTelecom/tef/transacao   
+2019-05-03 14:34:04.9055|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Policy execution successful. 
+2019-05-03 14:34:04.9415|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 186.9468ms 204  
+2019-05-03 14:34:04.9727|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:53880/api/algarTelecom/tef/transacao application/json;charset=UTF-8 70 
+2019-05-03 14:34:04.9753|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Policy execution successful. 
+2019-05-03 14:34:05.7358|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method AlgarCliSiTef.Controllers.ValuesController.Post (AlgarCliSiTef) with arguments (Core.TEF.Commands.RechargeCommand) - ModelState is Valid 
+2019-05-03 14:34:28.6022|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action AlgarCliSiTef.Controllers.ValuesController.Post (AlgarCliSiTef) in 23240.6545ms 
+2019-05-03 14:34:28.7119||ERROR|AlgarCliSiTef.Middleware.ErrorHandlingMiddleware|Exception of type 'Core.Exceptions.BusinessException' was thrown. Core.Exceptions.BusinessException: Exception of type 'Core.Exceptions.BusinessException' was thrown.
+   at Core.TEF.Service.TEFService.RealizaTransacao(RechargeCommand rechargeCommand) in C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\Core\TEF\Service\TEFService.cs:line 75
+   at AlgarCliSiTef.Controllers.ValuesController.Post(RechargeCommand rechargeCommands) in C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\AlgarCliSiTef\Controllers\ValuesController.cs:line 27
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.<Invoke>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at AlgarCliSiTef.Middleware.ErrorHandlingMiddleware.<Invoke>d__2.MoveNext() in C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\AlgarCliSiTef\Middleware\ErrorHandlingMiddleware.cs:line 28
+2019-05-03 14:34:28.8284|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 23855.8966ms 500 application/json 
+2019-05-03 14:37:01.1260|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:53880/api/algarTelecom/tef/transacao   
+2019-05-03 14:37:01.1260|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Policy execution successful. 
+2019-05-03 14:37:01.1260|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 2.5463ms 204  
+2019-05-03 14:37:01.1423|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:53880/api/algarTelecom/tef/transacao application/json;charset=UTF-8 70 
+2019-05-03 14:37:01.1423|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Policy execution successful. 
+2019-05-03 14:37:01.1467|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method AlgarCliSiTef.Controllers.ValuesController.Post (AlgarCliSiTef) with arguments (Core.TEF.Commands.RechargeCommand) - ModelState is Valid 
+2019-05-03 14:38:15.6851||DEBUG|AlgarCliSiTef.Program|init main 
+2019-05-03 14:38:19.8406||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\heitor.araujo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-05-03 14:38:31.6608|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:53880/api/values   
+2019-05-03 14:38:33.0926|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1567.1999ms 404 text/plain 
+2019-05-03 14:38:33.3078|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:53880/favicon.ico   
+2019-05-03 14:38:33.3078|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 6.1661ms 404 text/plain 
+2019-05-03 14:38:46.9080|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:53880/api/algarTelecom/tef/transacao   
+2019-05-03 14:38:46.9549|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Policy execution successful. 
+2019-05-03 14:38:46.9978|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 89.72ms 204  
+2019-05-03 14:38:47.0204|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:53880/api/algarTelecom/tef/transacao application/json;charset=UTF-8 70 
+2019-05-03 14:38:47.0204|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Policy execution successful. 
+2019-05-03 14:38:47.8758|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method AlgarCliSiTef.Controllers.ValuesController.Post (AlgarCliSiTef) with arguments (Core.TEF.Commands.RechargeCommand) - ModelState is Valid 
+2019-05-03 14:39:07.2240|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action AlgarCliSiTef.Controllers.ValuesController.Post (AlgarCliSiTef) in 19869.4826ms 
+2019-05-03 14:39:10.7333||ERROR|AlgarCliSiTef.Middleware.ErrorHandlingMiddleware|Exception of type 'Core.Exceptions.BusinessException' was thrown. Core.Exceptions.BusinessException: Exception of type 'Core.Exceptions.BusinessException' was thrown.
+   at Core.TEF.Service.TEFService.RealizaTransacao(RechargeCommand rechargeCommand) in C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\Core\TEF\Service\TEFService.cs:line 75
+   at AlgarCliSiTef.Controllers.ValuesController.Post(RechargeCommand rechargeCommands) in C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\AlgarCliSiTef\Controllers\ValuesController.cs:line 27
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.<Invoke>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at AlgarCliSiTef.Middleware.ErrorHandlingMiddleware.<Invoke>d__2.MoveNext() in C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\AlgarCliSiTef\Middleware\ErrorHandlingMiddleware.cs:line 28
+2019-05-03 14:39:10.8475|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 23827.1636ms 500 application/json 
+2019-05-03 14:39:58.5799|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:53880/api/algarTelecom/tef/transacao   
+2019-05-03 14:39:58.5870|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Policy execution successful. 
+2019-05-03 14:39:58.6806|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 100.7371ms 204  
+2019-05-03 14:39:58.6977|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:53880/api/algarTelecom/tef/transacao application/json;charset=UTF-8 70 
+2019-05-03 14:39:58.6977|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Policy execution successful. 
+2019-05-03 14:39:58.7093|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method AlgarCliSiTef.Controllers.ValuesController.Post (AlgarCliSiTef) with arguments (Core.TEF.Commands.RechargeCommand) - ModelState is Valid 
+2019-05-03 14:41:10.0353||DEBUG|AlgarCliSiTef.Program|init main 
+2019-05-03 14:41:15.0301||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\heitor.araujo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-05-03 14:41:27.8772|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:53880/api/values   
+2019-05-03 14:41:28.4695|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 654.1592ms 404 text/plain 
+2019-05-03 14:41:28.8675|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:53880/favicon.ico   
+2019-05-03 14:41:28.8795|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 12.0864ms 404 text/plain 
+2019-05-03 14:41:55.5507|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:53880/api/algarTelecom/tef/transacao   
+2019-05-03 14:41:55.5774|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Policy execution successful. 
+2019-05-03 14:41:55.5996|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 48.9203ms 204  
+2019-05-03 14:41:55.6902|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:53880/api/algarTelecom/tef/transacao application/json;charset=UTF-8 70 
+2019-05-03 14:41:55.6982|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Policy execution successful. 
+2019-05-03 14:41:56.3072|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method AlgarCliSiTef.Controllers.ValuesController.Post (AlgarCliSiTef) with arguments (Core.TEF.Commands.RechargeCommand) - ModelState is Valid 
+2019-05-03 14:59:38.9043||DEBUG|AlgarCliSiTef.Program|init main 
+2019-05-03 14:59:41.8160||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\heitor.araujo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-05-03 14:59:55.6519|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:53880/api/values   
+2019-05-03 14:59:56.4432|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 876.2845ms 404 text/plain 
+2019-05-03 14:59:56.6830|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:53880/favicon.ico   
+2019-05-03 14:59:56.7198|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 36.9502ms 404 text/plain 
+2019-05-03 14:59:59.4586|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:53880/api/algarTelecom/tef/transacao   
+2019-05-03 14:59:59.4752|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Policy execution successful. 
+2019-05-03 14:59:59.5300|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 71.3717ms 204  
+2019-05-03 14:59:59.5439|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:53880/api/algarTelecom/tef/transacao application/json;charset=UTF-8 70 
+2019-05-03 14:59:59.5439|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Policy execution successful. 
+2019-05-03 15:00:00.1781|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method AlgarCliSiTef.Controllers.ValuesController.Post (AlgarCliSiTef) with arguments (Core.TEF.Commands.RechargeCommand) - ModelState is Valid 
+2019-05-03 15:01:40.3785|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext. 
+2019-05-03 15:01:40.4481|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action AlgarCliSiTef.Controllers.ValuesController.Post (AlgarCliSiTef) in 100701.0874ms 
+2019-05-03 15:01:40.5155|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 100968.8959ms 200 application/json; charset=utf-8 
+2019-05-03 15:01:41.6006|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:53880/api/algarTelecom/tef/finaliza   
+2019-05-03 15:01:41.6266|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Policy execution successful. 
+2019-05-03 15:01:41.6266|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 33.104ms 204  
+2019-05-03 15:01:41.6895|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:53880/api/algarTelecom/tef/finaliza application/json;charset=UTF-8 83 
+2019-05-03 15:01:41.7069|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Policy execution successful. 
+2019-05-03 15:01:41.8212|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method AlgarCliSiTef.Controllers.ValuesController.Finaliza (AlgarCliSiTef) with arguments (Core.TEF.Commands.EndPaymentCommand) - ModelState is Valid 
+2019-05-03 15:01:43.2125|1|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 200 
+2019-05-03 15:01:43.2384|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action AlgarCliSiTef.Controllers.ValuesController.Finaliza (AlgarCliSiTef) in 1435.8884ms 
+2019-05-03 15:01:43.2384|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1554.5815ms 200  
+2019-05-03 15:24:30.6856||DEBUG|AlgarCliSiTef.Program|init main 
+2019-05-03 15:24:35.1712||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\heitor.araujo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-05-03 15:24:53.9756|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:53880/api/values   
+2019-05-03 15:24:55.0295|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1164.0788ms 404 text/plain 
+2019-05-03 15:24:55.2513|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:53880/favicon.ico   
+2019-05-03 15:24:55.3034|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 52.202ms 404 text/plain 
+2019-05-03 15:25:00.6524|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:53880/api/algarTelecom/tef/transacao   
+2019-05-03 15:25:00.6805|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Policy execution successful. 
+2019-05-03 15:25:00.7351|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 82.8359ms 204  
+2019-05-03 15:25:00.7793|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:53880/api/algarTelecom/tef/transacao application/json;charset=UTF-8 70 
+2019-05-03 15:25:00.7866|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Policy execution successful. 
+2019-05-03 15:25:01.8444|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method AlgarCliSiTef.Controllers.ValuesController.Post (AlgarCliSiTef) with arguments (Core.TEF.Commands.RechargeCommand) - ModelState is Valid 
+2019-05-03 15:25:36.7766|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action AlgarCliSiTef.Controllers.ValuesController.Post (AlgarCliSiTef) in 35604.4083ms 
+2019-05-03 15:25:46.5268||ERROR|AlgarCliSiTef.Middleware.ErrorHandlingMiddleware|Exception of type 'Core.Exceptions.BusinessException' was thrown. Core.Exceptions.BusinessException: Exception of type 'Core.Exceptions.BusinessException' was thrown.
+   at Core.TEF.Service.TEFService.RealizaTransacao(RechargeCommand rechargeCommand) in C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\Core\TEF\Service\TEFService.cs:line 75
+   at AlgarCliSiTef.Controllers.ValuesController.Post(RechargeCommand rechargeCommands) in C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\AlgarCliSiTef\Controllers\ValuesController.cs:line 27
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.<Invoke>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at AlgarCliSiTef.Middleware.ErrorHandlingMiddleware.<Invoke>d__2.MoveNext() in C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\AlgarCliSiTef\Middleware\ErrorHandlingMiddleware.cs:line 28
+2019-05-03 15:25:46.5985|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 45839.9881ms 500 application/json 
+2019-05-03 16:00:07.0052||DEBUG|AlgarCliSiTef.Program|init main 
+2019-05-03 16:00:13.8176||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\heitor.araujo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-05-03 16:00:34.8355||DEBUG|AlgarCliSiTef.Program|init main 
+2019-05-03 16:00:36.2393||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\heitor.araujo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-05-03 16:00:57.3735|6|FATAL|Microsoft.AspNetCore.Hosting.Internal.WebHost|Application startup exception Core.Exceptions.BusinessException: Exception of type 'Core.Exceptions.BusinessException' was thrown.
+   at Core.Utils.TefMessages.PinpadErrors(Int32 value) in C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\Core\Utils\TefMessages.cs:line 90
+   at AlgarCliSiTef.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env) in C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\AlgarCliSiTef\Startup.cs:line 81
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.ApplicationInsights.HostingStartup.ApplicationInsightsLoggerStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.ApplicationInsights.AspNetCore.ApplicationInsightsStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISSetupFilter.<>c__DisplayClass3_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+2019-05-03 16:10:42.3394||DEBUG|AlgarCliSiTef.Program|init main 
+2019-05-03 16:10:47.7601||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\heitor.araujo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-05-03 16:11:08.3914|6|FATAL|Microsoft.AspNetCore.Hosting.Internal.WebHost|Application startup exception Core.Exceptions.BusinessException: Exception of type 'Core.Exceptions.BusinessException' was thrown.
+   at Core.Utils.TefMessages.PinpadErrors(Int32 value) in C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\Core\Utils\TefMessages.cs:line 90
+   at AlgarCliSiTef.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env) in C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\AlgarCliSiTef\Startup.cs:line 81
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.ApplicationInsights.HostingStartup.ApplicationInsightsLoggerStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.ApplicationInsights.AspNetCore.ApplicationInsightsStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISSetupFilter.<>c__DisplayClass3_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+2019-05-03 16:11:09.4718|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:53880/api/values   
+2019-05-03 16:11:09.7149|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 301.8911ms 500 text/html; charset=utf-8 
+2019-05-03 16:11:10.0748|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:53880/favicon.ico   
+2019-05-03 16:11:10.1588|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 82.8259ms 500 text/html; charset=utf-8 

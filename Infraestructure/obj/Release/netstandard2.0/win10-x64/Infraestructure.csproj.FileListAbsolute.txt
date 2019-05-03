@@ -1,0 +1,8 @@
+C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\Infraestructure\bin\Release\netstandard2.0\win10-x64\Infraestructure.deps.json
+C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\Infraestructure\bin\Release\netstandard2.0\win10-x64\Infraestructure.dll
+C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\Infraestructure\bin\Release\netstandard2.0\win10-x64\Infraestructure.pdb
+C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\Infraestructure\obj\Release\netstandard2.0\win10-x64\Infraestructure.csproj.CoreCompileInputs.cache
+C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\Infraestructure\obj\Release\netstandard2.0\win10-x64\Infraestructure.AssemblyInfoInputs.cache
+C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\Infraestructure\obj\Release\netstandard2.0\win10-x64\Infraestructure.AssemblyInfo.cs
+C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\Infraestructure\obj\Release\netstandard2.0\win10-x64\Infraestructure.dll
+C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\Infraestructure\obj\Release\netstandard2.0\win10-x64\Infraestructure.pdb

@@ -1,0 +1,16 @@
+C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\AlgarCliSiTef\bin\Release\netcoreapp2.0\win10-x64\hostpolicy.dll
+C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\AlgarCliSiTef\bin\Release\netcoreapp2.0\win10-x64\hostfxr.dll
+C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\AlgarCliSiTef\bin\Release\netcoreapp2.0\win10-x64\AlgarCliSiTef.exe
+C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\AlgarCliSiTef\bin\Release\netcoreapp2.0\win10-x64\AlgarCliSiTef.deps.json
+C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\AlgarCliSiTef\bin\Release\netcoreapp2.0\win10-x64\AlgarCliSiTef.runtimeconfig.json
+C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\AlgarCliSiTef\bin\Release\netcoreapp2.0\win10-x64\AlgarCliSiTef.runtimeconfig.dev.json
+C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\AlgarCliSiTef\bin\Release\netcoreapp2.0\win10-x64\AlgarCliSiTef.dll
+C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\AlgarCliSiTef\bin\Release\netcoreapp2.0\win10-x64\AlgarCliSiTef.pdb
+C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\AlgarCliSiTef\obj\Release\netcoreapp2.0\win10-x64\AlgarCliSiTef.csproj.CoreCompileInputs.cache
+C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\AlgarCliSiTef\obj\Release\netcoreapp2.0\win10-x64\AlgarCliSiTef.AssemblyInfoInputs.cache
+C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\AlgarCliSiTef\obj\Release\netcoreapp2.0\win10-x64\AlgarCliSiTef.AssemblyInfo.cs
+C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\AlgarCliSiTef\obj\Release\netcoreapp2.0\win10-x64\AlgarCliSiTef.dll
+C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\AlgarCliSiTef\obj\Release\netcoreapp2.0\win10-x64\AlgarCliSiTef.pdb
+C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\AlgarCliSiTef\bin\Release\netcoreapp2.0\win10-x64\Core.dll
+C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\AlgarCliSiTef\bin\Release\netcoreapp2.0\win10-x64\Core.pdb
+C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\AlgarCliSiTef\bin\Release\netcoreapp2.0\win10-x64\NLog.config
