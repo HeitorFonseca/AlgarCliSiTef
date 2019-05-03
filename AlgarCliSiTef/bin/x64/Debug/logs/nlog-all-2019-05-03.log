@@ -253,3 +253,9 @@
 2019-05-03 16:11:09.7149|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 301.8911ms 500 text/html; charset=utf-8 
 2019-05-03 16:11:10.0748|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:53880/favicon.ico   
 2019-05-03 16:11:10.1588|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 82.8259ms 500 text/html; charset=utf-8 
+2019-05-03 16:16:49.0553||DEBUG|AlgarCliSiTef.Program|init main 
+2019-05-03 16:16:53.1272||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\heitor.araujo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2019-05-03 16:17:07.2568|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:53880/api/values   
+2019-05-03 16:17:08.1045|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 962.2147ms 404 text/plain 
+2019-05-03 16:17:08.4142|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:53880/favicon.ico   
+2019-05-03 16:17:08.4142|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 4.7083ms 404 text/plain 

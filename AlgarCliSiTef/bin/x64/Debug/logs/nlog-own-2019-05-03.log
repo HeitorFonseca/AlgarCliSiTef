@@ -160,3 +160,4 @@
    at Microsoft.AspNetCore.Server.IISIntegration.IISSetupFilter.<>c__DisplayClass3_0.<Configure>b__0(IApplicationBuilder app)
    at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
    at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()|url: |action: 
+2019-05-03 16:16:49.0553||DEBUG|AlgarCliSiTef.Program|init main |url: |action: 

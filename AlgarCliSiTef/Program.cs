@@ -17,7 +17,7 @@ namespace AlgarCliSiTef
         {
             new ArgumentException();
 
-            var logger = NLog.Web.NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
+            var logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
             try
             {
                 logger.Debug("init main");
@@ -45,7 +45,7 @@ namespace AlgarCliSiTef
                     logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
                 })
                 .UseNLog()
-                .UseUrls(urls: "http://localhost:5000")                
+                .UseUrls(urls: "http://localhost:53880")                
                 .Build();
     }
 }
