@@ -52,12 +52,15 @@ namespace Core.Utils
             }
         }
 
-        public static void ValueErrors(int value)
+        public static void ValueErrors(int value, int continua = 0)
         {
             switch (value)
             {
                 case -2:
-                    throw new BusinessException(BusinessMessages.InitError.OPERATOR_CANCEL_ERROR);
+                    if (continua == -1)
+                        throw new BusinessException(BusinessMessages.Error.BRAND_ERROR);
+                    else
+                        throw new BusinessException(BusinessMessages.InitError.OPERATOR_CANCEL_ERROR);
 
                 case -5:
                     throw new BusinessException(BusinessMessages.InitError.SITEF_COMMUNICATION_ERROR);

@@ -31,10 +31,6 @@ namespace AlgarCliSiTef
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddMvc(options =>
-            //{
-            //    options.Filters.Add(new BusinessExceptionFilter());
-            //});
 
             services.AddMvc();
 
@@ -53,13 +49,12 @@ namespace AlgarCliSiTef
         {
             if (env.IsDevelopment())
             {
-                //app.UseDeveloperExceptionPage();
+                app.UseDeveloperExceptionPage();
             }
             else
             {
-                //app.UseExceptionHandler("/Error");
-                //app.UseStatusCodePages();
-
+                app.UseExceptionHandler("/Error");
+                app.UseStatusCodePages();
             }
            
             app.UseExceptionHandler("/Errors");

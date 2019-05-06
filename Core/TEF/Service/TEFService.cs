@@ -55,6 +55,11 @@ namespace Core.TEF.Service
                     if (value == CONTINUA)
                     {
                         ComandoTipoCampo(Comando, TipoCampo, ref Buffer, rechargeCommand.Id);
+
+                        if (Comando == 0 && TipoCampo == 132 && string.IsNullOrEmpty(codBandeira))
+                        {
+                            Continua = -1;
+                        }
                     }
                     else if (value == FINALIZA_TRANSACAO)
                     {
@@ -62,7 +67,7 @@ namespace Core.TEF.Service
                     }
                     else
                     {
-                        TefMessages.ValueErrors(value);
+                        TefMessages.ValueErrors(value, Continua);
                     }  
                     
                 }
@@ -112,11 +117,11 @@ namespace Core.TEF.Service
                             message = buffer.ToString()
                         };
 
-                        PushServiceBuilder.GetInstance().Trigger(new[] { $"terminal-{terminalId}" }, "PinPadMessageChanged", obj);
+                        TerminalMessages.SendMessage(terminalId, obj);
                     }
                     else if (tipoCampo == 132)
                     {
-                        this.codBandeira = GetCodBandeira(buffer.ToString());
+                        codBandeira = VerificaCodBandeira(buffer.ToString());
                     }
 
                     break;
@@ -129,14 +134,7 @@ namespace Core.TEF.Service
                         message = buffer.ToString()
                     };
 
-                    PushServiceBuilder.GetInstance().Trigger(new[] { $"terminal-{terminalId}" }, "PinPadMessageChanged", obj);
-
-                    break;
-
-                case 4: 
-
-                    if (buffer.ToString() == "Selecione a forma de pagamento")
-                        buffer = new StringBuilder("1"); /* Pagamento somente À vista */
+                    TerminalMessages.SendMessage(terminalId, obj);
 
                     break;
 
@@ -148,7 +146,7 @@ namespace Core.TEF.Service
             }
         }
         
-        private string GetCodBandeira(string codBandeira)
+        private string VerificaCodBandeira(string codBandeira)
         {
             string bandeira = String.Empty;
 
@@ -158,18 +156,12 @@ namespace Core.TEF.Service
                     bandeira = "VISA";
                     break;
 
-                case "20001": //  Maestro Débito 
-                    bandeira = "MAESTRO";
-                    break;
-
                 case "00002": // Mastercard Crédito
                     bandeira = "MASTERCARD";
                     break;
 
-                case "20002": // Visa Electron Débito
-                    bandeira = "VISA ELECTRON";
-                    break;
-
+                //default:    // Só serão aceitos os cartões VISA e MASTER
+                //    throw new BusinessException(BusinessMessages.Error.BRAND_ERROR);
             }
 
             return bandeira;
