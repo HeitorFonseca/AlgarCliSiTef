@@ -158,11 +158,18 @@ namespace Core.Messages
                 Description = "Tempo de operação de recarga expirado."
             };
 
-            public const string BRAND_ERROR_CODE = "9998";
+            public const string BRAND_ERROR_CODE = "9997";
             public static readonly Message BRAND_ERROR = new ErrorMessage
             {
                 Code = ERROR_CODE,
                 Description = "Bandeira não suportada"
+            };
+
+            public const string INSERT_CARD_TIMEOUT_ERROR_CODE = "9996";
+            public static readonly Message INSERT_CARD_TIMEOUT_ERROR = new ErrorMessage
+            {
+                Code = ERROR_CODE,
+                Description = "Tempo de espera expirado"
             };
         }
     }

@@ -77,6 +77,11 @@ namespace Core.Utils
             }
         }
 
+        public static void TimeoutErrors()
+        {
+            throw new BusinessException(BusinessMessages.Error.INSERT_CARD_TIMEOUT_ERROR);
+        }
+
         public static void PinpadErrors(int value)
         {
             if (value == 0)

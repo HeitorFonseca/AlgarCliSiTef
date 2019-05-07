@@ -56,8 +56,8 @@ namespace AlgarCliSiTef
                 app.UseExceptionHandler("/Error");
                 app.UseStatusCodePages();
             }
-           
-            app.UseExceptionHandler("/Errors");
+
+            app.UseExceptionHandler();
             app.UseStatusCodePages();
             app.UseMiddleware<ErrorHandlingMiddleware>();  
             app.UseCors(MyAllowSpecificOrigins);

@@ -17,6 +17,8 @@ namespace Core.TEF.Service
         private const int CONTINUA = 10000;
         private const int FINALIZA_TRANSACAO = 0;
         private string codBandeira;
+        private bool insertCard = false;
+        private DateTime startTime;
 
         public RechargeViewModel RealizaTransacao(RechargeCommand rechargeCommand)
         {
@@ -124,6 +126,7 @@ namespace Core.TEF.Service
                         codBandeira = VerificaCodBandeira(buffer.ToString());
                     }
 
+                    insertCard = false;
                     break;
 
                 case 3:
@@ -136,13 +139,36 @@ namespace Core.TEF.Service
 
                     TerminalMessages.SendMessage(terminalId, obj);
 
+                    insertCard = false;
                     break;
 
                 case 20:
                     if (buffer.ToString() == "13 - Operacao Cancelada?")
                         buffer = new StringBuilder("0"); /* Cancelar pagamento ao clicar em anula na maquina */
+
+                    insertCard = false;
                     break;
-                
+
+                case 23:
+                    if (tipoCampo == -1)
+                    {
+                        if (!insertCard)
+                        {
+                            startTime = DateTime.Now;
+                            insertCard = true;
+                        }
+                        else
+                        {
+                            if (DateTime.Now.Subtract(startTime).TotalMilliseconds > 60000)
+                                TefMessages.TimeoutErrors();
+                        }
+                    }
+                                                         
+                    break;
+
+                default:
+                    insertCard = false;
+                    break;
             }
         }
         
@@ -160,8 +186,8 @@ namespace Core.TEF.Service
                     bandeira = "MASTERCARD";
                     break;
 
-                //default:    // Só serão aceitos os cartões VISA e MASTER
-                //    throw new BusinessException(BusinessMessages.Error.BRAND_ERROR);
+                default:    // Só serão aceitos os cartões VISA e MASTER
+                    throw new BusinessException(BusinessMessages.Error.BRAND_ERROR);
             }
 
             return bandeira;
