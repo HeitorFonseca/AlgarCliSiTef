@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlgarCliSiTef", "AlgarCliSi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{BAB4C1A3-5C8C-4D5F-9E1B-CB24CFB3D61F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infraestructure", "Infraestructure\Infraestructure.csproj", "{8E7D140A-6495-4D7F-9A3A-E38259270DC4}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,14 +31,6 @@ Global
 		{BAB4C1A3-5C8C-4D5F-9E1B-CB24CFB3D61F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BAB4C1A3-5C8C-4D5F-9E1B-CB24CFB3D61F}.Release|x64.ActiveCfg = Release|x64
 		{BAB4C1A3-5C8C-4D5F-9E1B-CB24CFB3D61F}.Release|x64.Build.0 = Release|x64
-		{8E7D140A-6495-4D7F-9A3A-E38259270DC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8E7D140A-6495-4D7F-9A3A-E38259270DC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8E7D140A-6495-4D7F-9A3A-E38259270DC4}.Debug|x64.ActiveCfg = Debug|x64
-		{8E7D140A-6495-4D7F-9A3A-E38259270DC4}.Debug|x64.Build.0 = Debug|x64
-		{8E7D140A-6495-4D7F-9A3A-E38259270DC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8E7D140A-6495-4D7F-9A3A-E38259270DC4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8E7D140A-6495-4D7F-9A3A-E38259270DC4}.Release|x64.ActiveCfg = Release|x64
-		{8E7D140A-6495-4D7F-9A3A-E38259270DC4}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

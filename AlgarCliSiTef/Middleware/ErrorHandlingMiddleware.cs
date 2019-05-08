@@ -47,13 +47,14 @@ namespace AlgarCliSiTef.Middleware
 
                 code = HttpStatusCode.InternalServerError;
             }
+
             //else if (ex is MyUnauthorizedException) code = HttpStatusCode.Unauthorized;
             //else if (ex is BusinessException) code = HttpStatusCode.BadRequest;
            
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = (int)code;
 
-            logger.Error(ex, ex.Message);
+            logger.Error(ex, result);
 
             return context.Response.WriteAsync(result);
         }
