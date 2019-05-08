@@ -1,8 +1,0 @@
-C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\Core\bin\Release\netstandard2.0\Core.deps.json
-C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\Core\bin\Release\netstandard2.0\Core.dll
-C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\Core\bin\Release\netstandard2.0\Core.pdb
-C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\Core\obj\Release\netstandard2.0\Core.csproj.CoreCompileInputs.cache
-C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\Core\obj\Release\netstandard2.0\Core.AssemblyInfoInputs.cache
-C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\Core\obj\Release\netstandard2.0\Core.AssemblyInfo.cs
-C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\Core\obj\Release\netstandard2.0\Core.dll
-C:\Users\heitor.araujo\source\repos\AlgarCliSiTef\Core\obj\Release\netstandard2.0\Core.pdb
