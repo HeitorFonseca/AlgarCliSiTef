@@ -23,7 +23,6 @@ namespace AlgarCliSiTef
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-
         }
 
         public IConfiguration Configuration { get; }
@@ -34,12 +33,16 @@ namespace AlgarCliSiTef
 
             services.AddMvc();
 
+            services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
+
             services.AddCors(options =>
             {
                 options.AddPolicy(MyAllowSpecificOrigins,
                 builder =>
                 {
-                    builder.WithOrigins("http://localhost:37374").AllowAnyHeader().AllowAnyMethod();
+                    builder.WithOrigins("http://localhost:37374",
+                                        "fzapphmg.azurewebsites.net")
+                           .AllowAnyHeader().AllowAnyMethod();
                 });
             });
         }
@@ -63,7 +66,15 @@ namespace AlgarCliSiTef
             app.UseCors(MyAllowSpecificOrigins);
             app.UseMvc();
 
-            ConfigfSitefInterativoModel confSitefModel = new ConfigfSitefInterativoModel("localhost", "00000000", "PV000001");
+            ConfigureSitef();
+
+        }
+
+        private void ConfigureSitef()
+        {
+            var config = Configuration.GetSection("AppSettings").Get<AppSettings>();
+
+            ConfigfSitefInterativoModel confSitefModel = new ConfigfSitefInterativoModel(config.SiTefIp, config.IdLoja, config.IdTerminal);
 
             var value = CliSiTefMethods.ConfiguraIntSiTefInterativo(confSitefModel.IpSiTef, confSitefModel.IdLoja, confSitefModel.IdTerminal, confSitefModel.Reservado);
 
@@ -74,6 +85,11 @@ namespace AlgarCliSiTef
 
             var keepAlive = CliSiTefMethods.KeepAlivePinPad();
             TefMessages.PinpadErrors(keepAlive);
+
+            Console.WriteLine("Endereço IP SiTef: {0} ", config.SiTefIp);
+            Console.WriteLine("Id da Loja: {0} ", config.IdLoja);
+            Console.WriteLine("Id do Terminal (PDV): {0} ", config.IdTerminal);
         }
+        
     }
 }

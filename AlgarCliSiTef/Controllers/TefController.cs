@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace AlgarCliSiTef.Controllers
 {
     [Route("api/algarTelecom/tef")]
-    public class ValuesController : Controller
+    public class TefController : Controller
     {
         private readonly TEFService _tefService = new TEFService();
             

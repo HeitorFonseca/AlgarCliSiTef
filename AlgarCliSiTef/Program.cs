@@ -45,7 +45,8 @@ namespace AlgarCliSiTef
                     logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
                 })
                 .UseNLog()
-                .UseUrls(urls: "http://localhost:53880")                
+                //.UseUrls(urls: "http://localhost:53880")                
+                .UseUrls(urls: "http://localhost:51234")
                 .Build();
     }
 }
