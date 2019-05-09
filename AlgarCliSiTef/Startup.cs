@@ -41,7 +41,7 @@ namespace AlgarCliSiTef
                 builder =>
                 {
                     builder.WithOrigins("http://localhost:37374",
-                                        "fzapphmg.azurewebsites.net")
+                                        "https://fzapphmg.azurewebsites.net")
                            .AllowAnyHeader().AllowAnyMethod();
                 });
             });
