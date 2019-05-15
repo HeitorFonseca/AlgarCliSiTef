@@ -162,7 +162,7 @@ namespace Core.Messages
             public static readonly Message BRAND_ERROR = new ErrorMessage
             {
                 Code = ERROR_CODE,
-                Description = "Bandeira não suportada"
+                Description = "Bandeira não suportada, somente Visa e Master."
             };
 
             public const string INSERT_CARD_TIMEOUT_ERROR_CODE = "9996";

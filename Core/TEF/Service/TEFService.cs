@@ -134,7 +134,7 @@ namespace Core.TEF.Service
                     obj = new
                     {
                         code = tipoCampo,
-                        message = buffer.ToString()
+                        message = buffer.ToString() == "70 - Modo Invalido. Retire e Passe o Cartao" ? "Modo de pagamento não suportado, somente crédito. Retire o Cartão" : buffer.ToString()
                     };
 
                     TerminalMessages.SendMessage(terminalId, obj);
@@ -147,6 +147,18 @@ namespace Core.TEF.Service
                         buffer = new StringBuilder("0"); /* Cancelar pagamento ao clicar em anula na maquina */
 
                     insertCard = false;
+                    break;
+
+                case 22:
+
+                    obj = new
+                    {
+                        code = tipoCampo,
+                        message = (buffer.ToString() == "Cartao nao configurado" ? "Cartão não suportado, somente Visa e Master" : buffer.ToString())
+                    };
+
+                    TerminalMessages.SendMessage(terminalId, obj);
+
                     break;
 
                 case 23:
