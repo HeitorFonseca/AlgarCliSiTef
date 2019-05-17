@@ -134,7 +134,8 @@ namespace Core.TEF.Service
                     obj = new
                     {
                         code = tipoCampo,
-                        message = buffer.ToString() == "70 - Modo Invalido. Retire e Passe o Cartao" ? "Modo de pagamento não suportado, somente crédito. Retire o Cartão" : buffer.ToString()
+                        message = buffer.ToString() == "70 - Modo Invalido. Retire e Passe o Cartao" ? "Modo de pagamento não suportado, somente crédito. Retire o Cartão" : 
+                                  (buffer.ToString() == "SOLICITE A SENHA" ? "DIGITE A SENHA" : buffer.ToString())
                     };
 
                     TerminalMessages.SendMessage(terminalId, obj);
